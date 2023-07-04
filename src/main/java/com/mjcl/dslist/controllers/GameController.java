@@ -1,5 +1,6 @@
 package com.mjcl.dslist.controllers;
 
+import com.mjcl.dslist.dto.GameDTO;
 import com.mjcl.dslist.dto.GameMinDTO;
 import com.mjcl.dslist.entities.Game;
 import com.mjcl.dslist.services.GameService;
@@ -24,8 +25,8 @@ public class GameController {
         return gameService.findAll();
     }
 
-//    @GetMapping(value = "/{id}")
-//    public GameMinDTO getGame(@PathParam(value = id) Long id) {
-//        return gameService.getGame(id);
-//    }
+    @GetMapping(value = "/{id}")
+    public GameDTO findById(@PathVariable Long id) {
+        return gameService.findById(id);
+    }
 }
