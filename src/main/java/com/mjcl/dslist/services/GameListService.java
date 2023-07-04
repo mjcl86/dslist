@@ -28,10 +28,4 @@ public class GameListService {
         return _retLst;
     }
 
-    @Transactional(readOnly = true)
-    public GameListDTO findById(Long listId) {
-        GameList _list = repository.findById(listId).get();
-        return new GameListDTO(_list);
-    }
-
 }
